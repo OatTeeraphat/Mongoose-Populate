@@ -1,8 +1,8 @@
 ignoreme.js
 node_modules/
 /node_modules
+/todo
+todo/
 /.git
 .git/
 test.js
-/todo
-todo/

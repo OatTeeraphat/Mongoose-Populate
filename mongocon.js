@@ -1,5 +1,5 @@
 var mongoose = require('mongoose')
-var config = require(__base + 'config') //require config file.
+var config = require(__base + 'mongo_config') //require config file.
 // console.log(process.env.NODE_ENV, config)
 
 var con = function () {
@@ -9,10 +9,10 @@ var con = function () {
   }
 //ensure mongodb connect.
   return connect()
-.on('error', console.log ,1000)
-    .on('reconnected', function () {console.log('reconnecting mongo...'),1000})
+    .on('error', console.log)
+    .on('reconnected', function () { console.log('reconnecting mongo...') })
     .on('disconnected', connect )
-    .on('open', function () { console.log('****mongodb connection opened!****') })
+    .on('open', function () { console.log('mongodb connection opened!') })
 }
 
 module.exports = con

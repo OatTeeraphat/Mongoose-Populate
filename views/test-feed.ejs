@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+    <head>
+  <body>
+      <div class="container">
+
+
+              <%
+               for(var i=0; i< col.length-1; i++) {%>
+              <div class="jumbotron" style="margin: 20px 0; ">
+                  <div style="width:100%; height:200px;">
+                     <h2><%= col[i].name %></h2>
+                     <a href="api/aommoney" class="btn btn-default">res.json</a>
+                     <a href="/publishers?Id=<%= col[i]._id %>" class="btn btn-primary">res <%=col[i].name%></a>
+                     <h5><%= col[i].desc %></h5><br>
+                     <%= ((new Date(new Date().getTime()))-(col[i].updated))/60000%> min ago <br>
+                      <div class="col-md-3 well">
+                        <h4><%= col[i].articles[0].name %></h4>
+                      </div>
+                      <div class="col-md-3 well">
+                        <h4><%= col[i].articles[1].name %></h4>
+                      </div>
+                      <div class="col-md-3 well">
+                        <h4><%= col[i].articles[2].name %></h4>
+                      </div>
+                      <div class="col-md-3 well">
+                        <h4><%= col[i].articles[3].name %></h4>
+                      </div>
+                
+                  </div>
+              </div>
+
+              <% }%>
+
+
+
+
+
+      </div>
+  </body>
+</html>

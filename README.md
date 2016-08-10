@@ -1,30 +1,34 @@
-# Mockup data
-dependencies 
-* body-parser
-* node.js
-* express
-* express-router
-* mongoose
-* morgan 
-# Install node module
-```sh
-$ npm install
-```
-# run-windows CMD
-```sh
-$ set NODE_ENV=development
-$ node server
-```
-# run osx CMD
-```sh
-$ sudo NODE_ENV=development node server &
-```
-# port80
-```sh
-localhost/mock >> all stringsify
-localhost/mock!json >>all res.json
+# Test LOGIN
+update 3rd
+** has rest service API
 
-localhost/mock/user!id=1 >>user stringsify id=1
-localhost/mock/user!json!id=1 >>all res.json >>user res.json id=1
+	"/api" >>for welcome json message
+	"/api/user" >> for json userlist 
 
-```
+Login with Facebook(Access token name profilePIC) & local login
+
+passport.JS  to access session form local & FBgraphAPI
+
+require : 
+*nodejs 
+*express4
+*monogoDB
+*ejs
+
+pls. install node module
+
+	"npm install" 
+
+can use config envoronment development or testserver and preview it
+
+	windows cmd >> set NODE_ENV=development
+		    >> node server 
+
+and linux preview At
+
+	linux cmd >> sudo NODE_ENV=development node server
+	
+	
+AND enjoy World :)
+
+Oatteeraphat :+1:

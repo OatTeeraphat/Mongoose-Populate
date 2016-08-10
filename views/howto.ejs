@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+    <head>
+  <body>
+      <div class="container">
+        <h1>How To USE The Publisher API</h1>
+        <h4>Get Json USE /api</h3>
+        <h4>Get Page USE /</h3>
+
+        <h3>Publisher services</h3>
+
+        <div class="well">
+            - render allPublisher (/publishers) <br>
+            TODO - <s>render PublisherProfile (/publishers&name=aommoney)</s> <br>
+            - render PublisherProfile (/publishers&Id) <br>
+            - render PublisherProfile (/:publisherName) <br>
+
+            - get all resent Pub (api/publishers) <br>
+            - get all resent Pub can limit&slice(api/publishers?skip=0&limit=1) <br>
+            - get Pub By PubId (api/publishers?id=1) <br>
+            - get Pub By PubName (api/aommoney) <br>
+        </div>
+
+        <h3>Column services</h3>
+
+        <div class="well">
+            - render contentlist (/:publisherName/:columns) >> is it possible?? <br>
+            TODO - <s>render contentlist (/:publisherName&column=moneyidea)</s> <br>
+            TODO - <s>render contentlist (/:publisherName/column=moneyidea)</s> <br>
+          
+            - get all resent Col (api/columns) <br>
+            - get all resent Col can limit&slice(api/columns?skip=0&limit=1) <br>
+            - get Col By PubId (api/columns?publisher=1) <br>
+            - get Col By PubId can limit&slice (api/columns?publisherId=1&skip=0&limit=1) <br>
+        </div>
+
+        <h3>Article services</h3>
+
+        <div class="well">
+            - render contentlist (/:publisherName/:columnName/:articleName) >> is it possible?? <br>
+            TODO - <s>render contentlist (/:publisherName&column=moneyidea&article=1)</s> <br>
+            TODO - <s>render contentlist (/:publisherName/column=moneyidea/article=1)</s> <br>
+
+            - get all resent Art (api/articles) <br>
+            - get all resent Art can limit&slice(api/articles?skip=0&limit=1) <br>
+            - get Art By ColId (api/articles?columnId=1) <br>
+            - get Art By ColId can limit&slice (api/articles?columnId=1&skip=0&limit=1) <br>
+        </div>
+
+</div>
+
+
+
+
+

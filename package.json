@@ -1,19 +1,57 @@
 {
-  "name": "publisherSchema",
+  "name": "publisherServer",
   "version": "0.0.0",
   "private": true,
-  "description": "good",
+  "description": "Server side route rendering and JSX transformer",
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "latest",
     "body-parser": "~1.0.0",
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.0.0",
+    "ejs": "~0.8.5",
     "express": "~4.0.0",
     "express-session": "~1.0.0",
     "method-override": "~1.0.0",
     "mongoose": "~3.8.1",
     "morgan": "~1.0.0",
-    "ejs": "~0.8.5"
-}
+    "passport": "~0.1.17",
+    "passport-facebook": "~1.0.3",
+    "passport-google-oauth": "~0.1.5",
+    "passport-local": "~0.1.6",
+    "passport-twitter": "~1.0.2",
+    "publisherWeb": "https://432jQMhx5KOzrVIwZ5ZuSh1w6LPUhGeS:x-oauth-basic@bitbucket.org/likemeinc/publisherweb.git#develop",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.1",
+    "require-dir": "^0.3.0",
+    "publisherSchema": "https://432jQMhx5KOzrVIwZ5ZuSh1w6LPUhGeS:x-oauth-basic@bitbucket.org/likemeinc/publisherschema.git#develop"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "node-jsx": "^0.13.3",
+    "reactify": "^1.1.1",
+    "fly" : "0.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ochawin@bitbucket.org/likemeinc/publisherserver.git"
+  },
+  "keywords": [
+    "publisherserver",
+    "publisher"
+  ],
+  "author": "ochawin",
+  "bugs": {
+    "url": "https://bitbucket.org/likemeinc/publisherserver/issues"
+  },
+  "homepage": "https://bitbucket.org/likemeinc/publisherserver",
+  "engines": {
+    "node": "6.x.x"
+  }
 }

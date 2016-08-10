@@ -1,0 +1,55 @@
+Publisher services
+
+- render allPublisher (/publishers)
+TODO - render PublisherProfile (/publishers&name=aommoney)
+- render PublisherProfile (/publishers&Id)
+- render PublisherProfile (/:publisherName)
+
+- get all resent Pub (api/publishers)
+- get all resent Pub can limit&slice(api/publishers?skip=0&limit=1)
+- get Pub By PubId (api/publishers?id=1)
+- get Pub By PubName (api/aommoney)
+
+
+Column services
+
+- render contentlist (/:publisherName/:columns) >> is it possible??
+TODO - render contentlist (/:publisherName&column=moneyidea)
+TODO - render contentlist (/:publisherName/column=moneyidea)
+
+- get all resent Col (api/columns)
+- get all resent Col can limit&slice(api/columns?skip=0&limit=1)
+- get Col By PubId (api/columns?publisher=1)
+- get Col By PubId can limit&slice (api/columns?publisherId=1&skip=0&limit=1)
+
+
+Article services
+
+- render contentlist (/:publisherName/:columnName/:articleName) >> is it possible??
+TODO - render contentlist (/:publisherName&column=moneyidea&article=1)
+TODO - render contentlist (/:publisherName/column=moneyidea/article=1)
+
+- get all resent Art (api/articles)
+- get all resent Art can limit&slice(api/articles?skip=0&limit=1)
+- get Art By ColId (api/articles?columnId=1)
+- get Art By ColId can limit&slice (api/articles?columnId=1&skip=0&limit=1)
+
+start on filesystem and started networking
+respawn
+chdir /home/surawut_t/projects/
+env NODE_ENV=testserver
+exec /usr/local/bin/node node server
+
+	app.use(function(req, res, next) {
+	  res.header("Access-Control-Allow-Origin", "*");
+	  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	  next();
+	});
+	//TODO : Get all publishers
+	app.get('/publishers', function(req, res){
+		if (Id = req.query['Id']) {
+			res.render('test-publisher.ejs',{ pub : mock.publishers[Id-1], a : 1});
+		} else {
+			res.render('test-publisher.ejs',{ pub : mock.publishers , a : 0 });
+		  }
+	});

@@ -1,3 +1,6 @@
+// load the things we need
+var mongoose = require('mongoose');
+var bcrypt   = require('bcrypt-nodejs');
 
 /* FOLDER
   Profile pic path : 
@@ -62,7 +65,7 @@ var userSchema = new Schema({
   
 })
 
-// RETURN http pic
+// RETURN pic path
 userSchema.virtual('pic').get(function(){
   /*
     TODO return pic path of users
@@ -77,16 +80,16 @@ userSchema.virtual('facebook.pic').get(function(){
   return 'http://graph.facebook.com/'+this.facebook.id+'/picture?width=160&height=160'
 })
 
-var publisherSchema = new Scheme({
-  _id: Number, 
-  name: String,
-  desc: String,
-  //filename
-  profilePic: String,
+var articleSchema = new Schema({
+  _id: Number,
+  name: String, 
+  readTime: Number, //min to read, compute everytime an article updated
   //filename
   coverPic: String,
+  content : String //path raw file 
   
-  columns: [{type:Number, ref:'columnSchema'}]
+  // TODO 
+  // Path picSchema in commentpost >>
 })
 
 // NOTE every publisher has default 'all' column
@@ -102,15 +105,21 @@ var columnSchema = new Schema({
   articles: [{type:Number, ref:'articleSchema'}]
 })
 
-var articleSchema = new Schema({
-  _id: Number,
-  name: String, 
-  readTime: Number, //min to read, compute everytime an article updated
-  //filename
-  coverPic: String,
-  content : String //path raw file 
-  
-  // TODO 
-  // Path picSchema in commentpost >>
-})
 
+var publisherSchema = new mongoose.Schema({
+  _id           : Number,
+  name          : String,
+  desc          : String,
+  profilePic    : String,//filename
+  coverPic      : String,//filename
+  columns       : [{type:Number, ref:'columnSchema'}]
+});
+
+////////////////// EXAMPLE /////////////////////////
+var column = {name : 'Money Idea'}
+var user = {email: 'xx@xx.com', roles: [
+  { roleName:'member', column: {name : 'Money Idea'} },
+  { role: 1, column: {name : 'Fintech'} }
+]}
+
+user.roles[0].roleName // => member

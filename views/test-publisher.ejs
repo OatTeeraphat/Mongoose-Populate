@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+    <head>
+  <body>
+      <div class="container">
+
+
+              <% if(a == 0){
+               for(var i=0; i< pub.length; i++) {%>
+               
+              <div class="well" style="margin: 20px 0 ">
+                 <h2><%= pub[i].name %></h2><br>
+                 <h5><%= pub[i].desc %></h5><br>
+              </div>
+              <% }} else { %>
+              
+              <div class="well" style="margin: 20px 0 ">
+                  <h2><%= pub.name %></h2><br>
+                  <h5><%= pub.desc %></h5><br>
+              </div>
+              <% } %>
+
+
+
+
+      </div>
+  </body>
+</html>
